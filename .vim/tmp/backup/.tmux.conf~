@@ -1,0 +1,11 @@
+#set -g xterm-keys on
+set -g default-terminal "screen-256color"
+#personal panes
+new -s work -n root -d "mc"
+splitw -h -t 0 -d "ssh root@192.168.99.107"
+send-keys -t 1 "mocp" enter C-l
+neww -n lan -d "sntop"
+splitw -h -t 1.0 -d "sntop -f /etc/sntoprc_switch"
+select-pane -t 1.1
+neww -n mac -d "ssh root@192.168.99.107"
+#send-keys -t 2 "upgrade" enter

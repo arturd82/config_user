@@ -1,0 +1,18 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+proc	/proc	proc	nodev,noexec,nosuid	0	0
+#Entry for /dev/sda6 :
+UUID=959ea893-3bf7-4cac-9eea-0b3e947af4a9	/	ext4	errors=remount-ro	0	1
+#Entry for /dev/sda7 :
+UUID=ca03baad-8e9b-43a2-bc25-c8ea24e0c1bc	/home	ext4	defaults	0	2
+#Entry for /dev/sda1 :
+UUID=0C2CC2B92CC29D58	/media/sda1	ntfs-3g	defaults,locale=ru_RU.UTF-8	0	0
+#Entry for /dev/sda4 :
+UUID=227AC2B127B3CFBA	/media/sda4	ntfs-3g	defaults,locale=ru_RU.UTF-8	0	0
+#Entry for /dev/sda5 :
+UUID=02cf8742-a4dc-46fd-92db-c8beb94e1772	none	swap	sw	0	0
+/dev/sdc	/media/floppy0	auto	rw,user,noauto,exec,utf8	0	0
+
+

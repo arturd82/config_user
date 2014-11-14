@@ -1,0 +1,6 @@
+[auth]
+login=artur.dudutsa@yandex.ru
+password=yaodynokiyvolk
+[paths]
+webdav=/root/.yadisk-davfs
+folder=/root/YandexDisk

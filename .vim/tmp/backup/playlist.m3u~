@@ -1,0 +1,36 @@
+#EXTM3U
+#MOCSERIAL: 6912
+#EXTINF:0,Makradio_Top_Hit_128
+http://stream.makradio.ru/tophit128.mp3/title
+#EXTINF:-1,Radio Jurnal FM
+http://188.40.64.232:8000/
+#EXTINF:-1,RadioZU
+http://stream.radiozu.ro:8020/
+#EXTINF:-1,Radio Retro FM Moldova
+http://mail.retrofm.md:8000/retro
+#EXTINF:0,Makradio_Retro_Hit_128
+http://stream.makradio.ru/retrohit128.mp3/title
+#EXTINF:0,Europa Plus MD
+http://77.89.229.190:8000/europaplus128.mp3
+#EXTINF:-1,Radio Retro FM
+http://webcast.emg.fm:55655/retro128.mp3
+#EXTINF:-1,Radio 21 Romania
+http://89.238.252.138:8000
+#EXTINF:2,Radio Prime FM
+http://212.56.209.70:8000/primefm
+#EXTINF:-1,Radio Hit-FM
+http://air-online2.hitfm.md/hitfm.mp3
+#EXTINF:-1,Megapolis FM
+http://78.24.50.58:8000/
+#EXTINF:-1,Radio Europa +
+http://radio.sampo.ru/europaplus.mp3
+#EXTINF:1,Radio Record
+http://radio.11one.ru/record192k.mp3
+#EXTINF:-1,Radio Noroc!
+http://live.radionoroc.md/9056/
+#EXTINF:-1,Radio Plai
+http://radioplai.md:8001/RadioPlai_Online.mp3
+#EXTINF:-1,Radio 7 Moldova
+http://78.24.51.66:8000/radio7_128
+#EXTINF:-1,Radio Кекс FM
+http://onair.eltel.net/keksfm-128k

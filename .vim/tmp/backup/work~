@@ -1,0 +1,4 @@
+#!/usr/bin/tmux source-file
+tmux new -s work -n root -d
+tmux splitw -h -d -t 0 'ssh root@192.168.99.107'
+tmux attach

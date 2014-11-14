@@ -1,0 +1,115 @@
+# "Another Russian .conkyrc" by iAndrey
+#
+# "Window layout & options",  "Colours, sizes, fonts & margins"
+# copied from "Russian conky" by Xplosive & Neonboy
+# (http://www.gnome-look.org/content/show.php/Russian+Conky?content=101524)
+
+#mpd_host
+#mpd_port
+#mpd_password
+
+# --- Window Layout & Options --- #
+own_window yes
+own_window_colour blue
+own_window_transparent yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+use_spacer right
+use_xft yes
+alignment top_right
+gap_x 5
+gap_y 32
+
+# --- Colours, Sizes, Fonts & Margins --- #
+update_interval 1.0
+maximum_width 250
+stippled_borders 3
+border_margin 9
+border_width 10
+default_color white
+
+# --- Text --- #
+draw_outline no
+draw_borders no
+#font Sans:size=9:weight=bold
+uppercase no
+draw_shades yes
+override_utf8_locale yes
+
+TEXT
+${font Sans:size=9:weight=bold}${color #296dac}Информация о системе ${hr 2}
+${color #4ea5cd}Хост:$color ${alignr}$nodename
+${color #4ea5cd}Ядро:$color ${alignr}$kernel ($machine)
+${color #4ea5cd}Работает:$color ${alignr}$uptime
+#${color #4ea5cd}Заряд батареи:$color ${battery_percent}% ${color #296dac}${battery_bar 3 BAT0}
+
+${color #296dac}${execi 99999 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | cut -d" " -f2- | sed 's#Processor ##'} ${hr 2}$color
+${color #4ea5cd}Ядро №1${color}${alignr 54}${cpu cpu0}% ${color #4ea5cd}Ядро №2${color}${alignr}${cpu cpu1}%
+${cpugraph cpu0 25,120 000000 4ea5cd }  ${cpugraph cpu1 25,120 000000 4ea5cd }
+#${color #4ea5cd}Температура на ЦПУ$color ${alignr 4}${hwmon temp 01}°С$color
+
+${color #296dac}Процессы: ($running_processes/ $processes)${hr 2}$color
+${color #4ea5cd}Имя процесса                  ${alignr}ID      ${alignr}ЦПУ$color${font Sans:size=8:weight=bold}
+1. ${top name 1}     ${alignr}${top pid 1}   ${alignr}${top cpu 1}
+2. ${top name 2}     ${alignr}${top pid 2}   ${alignr}${top cpu 2}
+3. ${top name 3}     ${alignr}${top pid 3}   ${alignr}${top cpu 3}
+4. ${top name 4}     ${alignr}${top pid 4}   ${alignr}${top cpu 4}
+5. ${top name 5}     ${alignr}${top pid 5}   ${alignr}${top cpu 5}
+
+${color #296dac}ОЗУ${hr 2}$color
+${color #4ea5cd}Имя процесса                  ${alignr}ID      ${alignr}ОЗУ$color${font Sans:size=8:weight=bold}
+1. ${top_mem name 1}     ${alignr}${top_mem pid 1}   ${alignr}${top_mem mem 2}
+2. ${top_mem name 2}     ${alignr}${top_mem pid 2}   ${alignr}${top_mem mem 2}
+3. ${top_mem name 3}     ${alignr}${top_mem pid 3}   ${alignr}${top_mem mem 3}
+4. ${top_mem name 4}     ${alignr}${top_mem pid 4}   ${alignr}${top_mem mem 4}
+5. ${top_mem name 5}     ${alignr}${top_mem pid 5}   ${alignr}${top_mem mem 5}
+
+${color #4ea5cd}Доступно: $color$alignr$memmax
+${color #4ea5cd}Используется: $color$mem (${memperc}%)  ${color #296dac}${membar 3.180}
+
+${color #296dac}SWAP ${hr 2}$color
+${color #4ea5cd}Доступно: $color$alignr$swapmax
+${color #4ea5cd}Используется: $color$swap (${swapperc}%)  ${color #296dac}${swapbar 3.180}
+
+${if_up eth1}${color #296dac}Проводная сеть (IP: ${addr eth1}) ${hr 2}$color
+${color #4ea5cd}Скорость передачи данных
+${color white}Вход.$color ${downspeed eth1}Кб/с${alignr}${color white}Исходящ.$color${alignr} ${upspeed eth1}Кб/с
+${downspeedgraph eth1 25,120 000000 4ea5cd} ${alignr}${upspeedgraph eth1 25,120 000000 296dac}
+${color #4ea5cd}Входящий трафик:$color${alignr}${totaldown eth1}
+${color #4ea5cd}Исходящий  трафик:$color${alignr}${totalup eth1}
+
+#${endif}${if_up wlan0}${color #296dac}Wi-Fi (IP: ${addr wlan0}) ${hr 2}$color
+#${color #4ea5cd}Сеть:$color${alignr}${wireless_essid wlan0}
+#${color #4ea5cd}Скорость подключения:$color${alignr}${wireless_bitrate wlan0}
+#${color #4ea5cd}Уровень сигнала:$color ${wireless_link_qual_perc wlan0}% ${color #296dac}${wireless_link_bar 3 wlan0}
+#${color #4ea5cd}Входящий трафик:$color${alignr}${totaldown wlan0}
+#${color #4ea5cd}Исходящий  трафик:$color${alignr}${totalup wlan0}
+#${color #4ea5cd}Скорость передачи данных
+#${color white}Вход.$color ${downspeed wlan0}Кб/с${alignr}${color white}Исходящ.$color${alignr} ${upspeed wlan0}Кб/с
+#${downspeedgraph wlan0 25,120 000000 4ea5cd} ${alignr}${upspeedgraph wlan0 25,120 000000 296dac}
+
+${endif}${if_gw}${color #296dac}Шлюз${hr 2}
+${color #4ea5cd}Интерфейс:$color${alignr}${gw_iface}
+${color #4ea5cd}IP:$color${alignr}${gw_ip}
+
+#${color #296dac}MPD: ${color #4ea5cd}${mpd_artist}: "${mpd_album}"${color #296dac}${hr 2}$color
+#${mpd_title} ${alignr} ${mpd_elapsed}/${mpd_length}
+#${color #4ea5cd}${mpd_bar 3}
+#${mpd_status}${color} ${mpd_percent}% ${alignr}${color #4ea5cd}Громкость: ${color}${mpd_vol}%
+
+${endif}${color #296dac}Свободное пространство разделов${hr 2}
+${color #4ea5cd}/$color  ${fs_free_perc /}%$alignr${fs_free /}/ ${fs_size /}
+${color #296dac}${fs_bar 3 /}
+#${color #4ea5cd}/home/$color  ${fs_free_perc /home}%$alignr${fs_free /home}/ ${fs_size /home}
+#${color #296dac}${fs_bar 3 /home}
+${if_mounted /media/sda1}
+${color #4ea5cd}/media/sda1$color  ${fs_free_perc /media/sda1}%$alignr${fs_free /media/sda1}/ ${fs_size /media/sda1}
+${color #296dac}${fs_bar 3 /media/sda1}${endif}
+${if_mounted /media/sda4}
+${color #4ea5cd}/media/sda5$color  ${fs_free_perc /media/sda5}%$alignr${fs_free /media/sda5}/ ${fs_size /media/sda5}
+${color #296dac}${fs_bar 3 /media/sda5}${endif}
+
+${color #4ea5cd}Температура HDD = $color${hddtemp /dev/sda} °C
+${font}

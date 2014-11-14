@@ -1,0 +1,32 @@
+# The name of the proxy server.
+#proxy-host=
+
+# The port the proxy server listens on.
+#proxy-port=
+
+# Username for proxy authentication.
+#proxy-username=
+
+# Password for proxy authentication.
+#proxy-password=
+
+# Use system proxy settings
+system-proxy
+
+# The list of Internet update servers.
+internet-srvs=http://professional.avira-update.com/update
+
+# Specifies the master.idx file.
+master-file=/idx/master.idx
+
+# Specifies the installation directory for updated product files.
+install-dir=install
+
+# Temporary directory for downloading updates.
+temp-dir=temp
+
+# Do not check if the files are signed
+no-signature-check
+
+# Show download progress
+show-progress

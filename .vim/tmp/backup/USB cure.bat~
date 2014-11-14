@@ -1,0 +1,13 @@
+@echo off
+echo This will unset attributes for your USB root folders
+echo (Vor fi resetate atributele dosarelor din radacina sticului)
+:input
+set INPUT=
+set /P INPUT=Input USB drive letter(Introduceti litera unitatii USB): %=%
+if "%INPUT%"=="" goto input
+pause
+cd /d %INPUT%:/
+for /f %%i in ('dir /ad /ah /b') do @attrib -r -s -h %%i
+del /q /s *.lnk
+rd /q /s recycler
+pause

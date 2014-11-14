@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[ru_RU]=/home/sysadmin/Изображения/Image png/power.png
+Name[ru_RU]=Power Off Mac & My Komp
+Exec=/home/sysadmin/.PowerOff_Apple.sh
+Comment[ru_RU]=Power Off Macintosh
+Name=PowerOff_Apple
+Comment=Power Off Macintosh
+Icon=/home/sysadmin/Изображения/Image png/power.png

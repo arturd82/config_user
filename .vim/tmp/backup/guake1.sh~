@@ -1,0 +1,31 @@
+#!/bin/bash
+#===============================================================================
+#
+#          FILE:  guake1.sh
+#
+#         USAGE:  ./guake1.sh
+#
+#   DESCRIPTION:
+#
+#       OPTIONS:  ---
+#  REQUIREMENTS:  ---
+#          BUGS:  ---
+#         NOTES:  ---
+#        AUTHOR:   (),
+#       COMPANY:
+#       VERSION:  1.0
+#       CREATED:  05.03.2014 16:19:59 EET
+#      REVISION:  ---
+#===============================================================================
+
+# Guake handles multiple starting, won't create new instances
+# Select first (0th) tab and rename it and execute something.
+guake -s 0 -r "sysadmin" -e "mc"
+# create a new tab in the ~ folder
+guake -n ~
+# rename the tab
+#guake -r "mac" -e "ssh root@192.168.99.107"
+#sleep 3
+#guake -n ~
+#sleep 3
+#guake -r "my-root" -e "sudo -i"

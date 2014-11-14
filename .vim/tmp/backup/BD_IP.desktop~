@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Link
+Icon[ru_RU]=/home/sysadmin/Изображения/Image png/My Computer (1).png
+URL=smb://192.168.99.107/bd/x.exe
+Name[ru_RU]=Baza de Date IP
+Name=BD IP
+Icon=/home/sysadmin/Изображения/Image png/My Computer (1).png

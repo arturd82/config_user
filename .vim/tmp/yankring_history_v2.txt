@@ -1,0 +1,100 @@
+panes,v
+servers-switches ,v
+#send-keys -t 0 "mc" enter,V
+#send-keys -t 1 "clear" enter,V
+#,v
+splitw -v -t 2.0 -d "htop",V
+ ,v
+l,v
+splitw -h -t 1.0 -d "htop",V
+neww -n utilities,V
+neww -n utilities -d "sntop",V
+splitw -v -t 1.0 -d "sntop -f /etc/sntoprc_switch",V
+split ,v
+vertical,v
+Catedra ,v
+linga ,v
+-,v
+server,v
+camera ,v
+administratie,v
+Switch-ul din ,v
+.,v
+,V
+Switch bl 5 et. 3192.168.241.5Switch-ul din blocul 5 etajul 3 (539),V
+Switch bl 5 et 1192.168.241.51Switch-ul din blocul 5 etajul 1 (coridor-linga 505),V
+#Switch bl 1 et. 2#192.168.241.13#Switch-ul din blocul 1 etajul 2 (coridor)#Switch bl 1 et. 2#192.168.241.14#Switch-ul din blocul 1 etajul 2 (coridor),v
+Switch bl 6 et. 2192.168.241.10Switch-ul din blocul 6 etajul 2 (645-linga Catedra PPAS),V
+Switch bl 4 et. 1 192.168.241.41Switch-ul din blocul 4 etajul 1 (coridor-linga decanat),V
+Switch bl 3 et. 1192.168.241.12Switch-ul din blocul 3 etajul 1 (telefonist),V
+Switch bl 1 et. 1192.168.241.111Switch-ul din blocul 1 etajul 1 (coridor administratie),V
+Switch bl 1 et. 1192.168.241.111Switch-ul din blocul 1 etajul 1 (coridor administratie),V
+Switch bl 5 et 1192.168.241.51Switch-ul din blocul 5 etajul 1 (coridor-linga 505),v
+Switch-ul din blocul 1 etajul 1 (coridor administratie),V
+192.168.241.41,V
+(coridor),v
+(coridor-linga decanat),v
+(,v
+Switch-ul din blocul 1 etajul 2 (coridor),V
+Switch bl 1 et. 2,V
+192.168.241.0,V
+),v
+addrarpa ,v
+in,v
+192,v
+168,v
+241,v
+3,v
+ 192.168.241.255,V
+-e sudo -i,v
+ENTRY "/home/sysadmin/Документы" URL "/home/sysadmin/Документы",V
+https://www.google.ru/?gws_rd=ssl,v
+C:C,v
+Commercial TV Ad,v
+77.89.229.190:8000/europaplus128.mp3,v
+live language menu,v
+http://onair.eltel.net/europaplus-128k.m3u ,v
+http://77.89.229.190:8000/europaplus128.mp3,v
+http://radio.sampo.ru/europaplus.mp3,v
+http,v
+ http://onair.eltel.net/europaplus-128k.m3u ,v
+ENTRY "Ubuntu_One" URL "/home/sysadmin/Ubuntu One",V
+title System Rescue CD vers_3.7.0map --unmap=0:0xffmap --unhookroot (hd0,0)map /systemrescuecd-x86-3.7.0.iso (0xff) || map --mem /systemrescuecd-x86-3.7.0.iso (0xff)map --hookroot (0xff)configfile /grub4dos.lst || chainloader (0xff)map --unmap=0:0xff,v
+символы,v
+,v
+,v
+C,v
+p,v
+o,v
+send-keys -t 1 "mocp" enter C-l,V
+#!/bin/bash,V
+persist,v
+without,v
+=,v
+#!/bin/bashecho "=================================================================="echo "This script will upload dd-wrt firmware (firmware.bin)"echo "in the current directory to 192.168.0.1 "echo "during the router's bootup. "echo ""echo "* Set your ethernet card's settings to: "echo "     IP:      192.168.0.10 "echo "     Mask:    255.255.255.0 "echo "     Gateway: 192.168.0.1 "echo "* Unplug the router's power cable. "echo ""echo "Press Ctrl+C to abort or any other key to continue... " readecho ""echo "* Re-plug the router's power cable. "echo "" echo "=================================================================="echo "Waiting for the router... Press Ctrl+C to abort. "echo ""try(){ ping -c 1 -w 1 192.168.0.1 } try while [ "$?" != "0" ] ; do try done echo "*** Start Flashing **** " atftp --no-source-port-checking -p -l firmware.bin 192.168.0.1 echo "Firmware successfully loaded!" ,v
+|1|IwUxE2JDFAw7c2ngq83xg+OeVOc=|fqjTr4AWWPL0FfAM9UP+nzJyNpo= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJJC0dFrmGLx8z1aUSPfSpEGrzz0MySLOBhDn4VMAGcmBghnloOQ58X16PHXa6EaoMzCk6jJbYH2hrQ8XgU6+vA=,V
+|1|4xlq6CvshB2pSzaf56INxQuZiJU=|XFBNCmet7pgM+fBG7iGn8pScYfI= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBiw4H0QCx0VcFUAUj8+JUxqwZfUii67alhEeFPwPnM1xjTufMKW4eS+xRy6tJ5B0UVbhPUAPTiHRFuGW87Bger/RjEcIwuk3a/g9gmM6yEEiQ9IWynhPejBImOiqlZVS3rxuVcZCeG617wbjlnkbfHWYe2fCRgOFw/wwhv0AZLab3mHr7cvzbH/pXkycAj4u3Em2pghQ5mq0nC6wn7hWYv96gyTupiwyVrtFtEx3HTDq+KZjv+6XWmWpP4hmPNC8eFdlZdGYg9DLsfc9d+UHgKnPzzUD/0N+c6Fo3RjhLsL0KMHf3zhanMLN4daSz6lDBIpD9bmJafLwR8BpHzyVH,V
+portofele hardware,v
+w,v
+tmux function keys not working,v
+      4)  Печально я гляжу на наше поколение!      5)  Его грядущее иль пусто иль темно...,V
+debian,v
+alias save-debian='VBoxManage controlvm "Debian" savestate',V
+alias debian-h="VBoxHeadless -s "Debian" -v off &",V
+alias mikrotik-h="vmrun start /media/sda4/Virtual\ Machines/mikrotik330/Mikrotik/Mikrotik.vmx"alias save-mikrotik="vmrun suspend /media/sda4/Virtual\ Machines/mikrotik330/Mikrotik/Mikrotik.vmx",V
+/root,V
+ путь к,v
+/usr/share/applications/Windows XP.desktop,V
+/,v
+16*16,v
+\,v
+virtualbox-vbox.png,v
+Icon=virtualbox-vbox.png,V
+"/home/sysadmin/GoogleDrive",v
+/home/sysadmin/GoogleDrive",v
+YCBwa1g4pd3mxE1eZD3tDZp,v
+setw -g xterm-keys on,V
+red="\033[1;31m",v
+ssh root@192.168.99.107",v
+splitw -h -t 0 -d "ssh root@192.168.99.107",V
+IIS ,v

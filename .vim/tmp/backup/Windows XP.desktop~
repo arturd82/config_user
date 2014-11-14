@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Windows XP
+Comment=Starts the VirtualBox machine Windows XP
+Type=Application
+Exec=/usr/lib/virtualbox/VirtualBox --comment "Windows XP" --startvm "d82a03a1-7d90-4e87-839c-10e2afcaf035"
+Icon=virtualbox-vbox.png
+#Icon=/home/sysadmin/Изображения/Image png/xp.png

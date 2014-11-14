@@ -1,0 +1,7 @@
+new -s work -n root -d
+splitw -h -t 0 -d "ssh root@192.168.99.107"
+#select-pane -t 1
+send-keys -t 0 "mc" enter
+send-keys -t 1 "mocp" enter
+#attach
+set -g default-terminal screen-256color

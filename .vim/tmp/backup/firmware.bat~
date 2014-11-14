@@ -1,0 +1,10 @@
+@Echo Off
+:BEGIN
+ping -n 1 -w 10 192.168.1.1
+if errorlevel 1 Goto BEGIN
+if errorlevel 0 Goto FLASH
+    Goto END
+:FLASH
+Echo *** Start Flashing ****
+tftp -i 192.168.1.1 put firmware.bin
+:END

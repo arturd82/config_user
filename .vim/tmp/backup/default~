@@ -1,0 +1,437 @@
+UI vesamenu.c32
+F2 f2images.msg
+F3 f3params.msg
+F4 f4arun.msg
+F5 f5troubl.msg
+F6 f6pxe.msg
+F7 f7net.msg
+
+PROMPT 0
+TIMEOUT 600
+ONTIMEOUT rescuecd_ru
+
+MENU DEFAULT rescuecd_std
+MENU TABMSG Press <TAB> to edit options or <F2>,<F3>,<F4>,<F5>,<F6>,<F7> for help
+MENU TITLE PXE Boot with Rescue CD by DTI
+MENU ROWS 16
+MENU TIMEOUTROW 22
+MENU TABMSGROW 24
+MENU CMDLINEROW 24
+MENU HELPMSGROW 26
+MENU WIDTH 78
+MENU MARGIN 6
+#MENU BACKGROUND #c00090f0
+MENU BACKGROUND /tux.png
+
+
+MENU color title    1;31;40    #FFFF0000 #00000000 std
+MENU color sel      7;37;40    #FF000000 #FFC0C0C0 all
+MENU color unsel    37;44      #FF000000 #00000000 none
+MENU color hotsel   1;7;37;40  #FF000000 #FFC0C0C0 all
+MENU color tabmsg   1;31;40    #FFFFFF00 #00000000 std
+MENU color help     1;31;40    #FFFFFFFF #00000000 none
+
+#INCLUDE kaspersky/menu.cfg
+
+LABEL rescuecd_ru
+  MENU LABEL System Rescue CD (customized), RU keymap
+  MENU DEFAULT
+  LINUX /sysrcd/rescue32
+  #LINUX rescuecd
+  #INITRD initram.igz
+  #APPEND scandelay=1 setkmap=ru eth0=192.168.99.107 netboot=http://192.168.99.107/sysrescuecd/sysrcd.dat
+  #APPEND initrd=initram.igz scandelay=1 setkmap=ru eth0=192.168.99.107 nfsboot=192.168.99.107:/srv/nfs/sysrescuecd gw=192.168.99.1
+  APPEND initrd=/sysrcd/initram.igz docache scandelay=1 setkmap=ru eth0=dhcp nfsboot=192.168.99.107:/srv/nfs/sysrescuecd gw=192.168.99.1
+  TEXT HELP
+  Boot standard 32 bit kernel and use the keymap for american and
+  russian keyboards
+  ENDTEXT
+
+LABEL rescuecd_ru_orig
+  MENU LABEL System Rescue CD (original), RU keymap
+  LINUX /sysrcd/rescue64
+  APPEND initrd=/sysrcd/initram.igz docache scandelay=1 setkmap=ru eth0=dhcp nfsboot=192.168.99.107:/srv/nfs/sysrcd gw=192.168.99.1
+  TEXT HELP
+  Boot standard 64 bit kernel and use the keymap for american and
+  russian keyboards
+  ENDTEXT
+
+LABEL Acronis True Image Home 2011
+  MENU LABEL Acronis True Image Home 2011
+  KERNEL /acronis/true_image/kernel vga=0x31b ramdisk_size=32768 quiet
+  INITRD /acronis/true_image/init vga=0x318 quiet acpi=off noapic quiet
+  TEXT HELP
+  Create and recovery backups of PC systems
+  ENDTEXT
+
+
+LABEL Acronis True Image Home 2013
+  MENU LABEL Acronis True Image Home 2013
+  KERNEL /acronis/true_image_2013/kernel vga=0x31b ramdisk_size=32768 quiet
+  INITRD /acronis/true_image_2013/ramdisk vga=0x318 quiet acpi=off noapic quiet
+  TEXT HELP
+  Create and recovery backups of PC systems
+  ENDTEXT
+
+
+
+#label Acronis Backup & Recovery 10
+#menu label Acronis Backup & Recovery 10
+#kernel /acronis/back&rec/kernel.dat vga=0x31b ramdisk_size=32768 quiet
+#initrd /acronis/back&rec/ramdisk.dat vga=0x318 quiet acpi=off noapic quiet
+
+LABEL Clonezilla Live
+  MENU LABEL Clonezilla Live
+  KERNEL /clonezilla/vmlinuz
+  #APPEND initrd=/clonezilla/initrd.img boot=live union=aufs netboot=nfs nfsroot=192.168.99.107:/srv/nfs/clonezilla
+  APPEND initrd=/clonezilla/initrd.img boot=live config noswap nolocales edd=on nomodeset ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_keymap="" ocs_live_batch="no" ocs_lang="" vga=788 nosplash noprompt netboot=nfs nfsroot=192.168.99.107:/srv/nfs/clonezilla
+  TEXT HELP
+  Clonezilla Live CD
+  ENDTEXT
+
+#label DRBL Live
+#MENU LABEL DRBL Live
+#kernel /drbl/vmlinuz
+#append initrd=/drbl/initrd.img boot=live config nomodeset ip=frommedia noswap nolocales edd=on ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_keymap="" ocs_live_batch="no" ocs_lang="" vga=788 nosplash noprompt netboot=nfs nfsroot=192.168.99.107:/srv/nfs/drbl
+#TEXT HELP
+# * DRBL live version: 1.0.5-6-i686. (C) 2003-2011, NCHC, Taiwan
+# * Disclaimer: DRBL comes with ABSOLUTELY NO WARRANTY
+#ENDTEXT
+
+LABEL Hiren
+  MENU LABEL Hiren's Boot CD v9.9
+  kernel /Hiren/HBCD/memdisk
+  append initrd=/Hiren/HBCD/hiren.ima floppy
+  TEXT HELP
+  Hiren's Boot CD
+  ENDTEXT
+
+#LABEL Hiren
+#  MENU LABEL Hiren's Boot CD
+#  kernel /iso/memdisk
+#  append iso raw initrd=/iso/hiren.iso
+#  TEXT HELP
+#  Hiren's Boot CD
+#  ENDTEXT
+
+#LABEL Acronis Disk Director Suite 10
+#  MENU LABEL Acronis Disk Director Suite 10
+#  KERNEL /acronis/disk_director_suite/kernel vga=0x31b ramdisk_size=32768 quiet
+#  APPEND initrd=/acronis/disk_director_suite/ramdisk vga=0x318 quiet acpi=off noapic quiet
+#  TEXT HELP
+#  Acronis Disk Director for server and desktop
+#  ENDTEXT
+
+LABEL Acronis Disk Director 11
+  MENU LABEL Acronis Disk Director 11
+  KERNEL /acronis/disk_director/kernel vga=0x31b ramdisk_size=32768 quiet
+  APPEND initrd=/acronis/disk_director/init vga=0x318 quiet acpi=off noapic quiet
+  TEXT HELP
+  Manage disks or volumes
+  ENDTEXT
+
+#LABEL Ubuntu Live CD
+#  MENU LABEL Ubuntu Live CD
+#  KERNEL /ubuntu/vmlinuz
+#  APPEND initrd=/ubuntu/initrd.lz boot=casper netboot=nfs nfsroot=192.168.99.107:/srv/nfs/ubuntu quiet splash --
+#  TEXT HELP
+#  Ubuntu 11.10 Live CD
+#  ENDTEXT
+
+MENU BEGIN
+MENU TITLE BackTrack 5 & Kali Linux
+
+LABEL BackTrack 5
+ MENU LABEL Backtrack 5
+ KERNEL /backtrack/casper/vmlinuz
+ APPEND initrd=/backtrack/casper/initrd.gz boot=casper text vga=789 netboot=nfs nfsroot=192.168.99.107:/srv/tftp/backtrack
+ TEXT HELP
+ Backtrack 5
+ ENDTEXT
+
+LABEL Kali Linux
+ MENU LABEL Kali Linux
+ KERNEL /kali/live/vmlinuz
+ APPEND initrd=/kali/live/initrd.img boot=live noconfig=sudo username=root hostname=kali¬ vga=789 netboot=nfs nfsroot=192.168.99.107:/srv/tftp/kali/
+ TEXT HELP
+ Kali Linux (old name BackTrack)
+ ENDTEXT
+
+MENU SEPARATOR
+
+LABEL return
+  MENU LABEL Return to main menu
+  MENU EXIT
+
+MENU END
+
+LABEL Memtest86+
+  MENU LABEL Memtest86+
+  KERNEL /memtest/memtest
+  TEXT HELP
+  Run memory test using Memtest86+
+  ENDTEXT
+
+#LABEL Windows 7 PXE
+#  MENU LABEL Windows 7 PXE
+#  KERNEL /seven/pxeboot.0
+#  TEXT HELP
+#  Windows 7 x86 Ultimate Rus Setup
+#  ENDTEXT
+
+#LABEL Windows XP Setup
+#  MENU LABEL Windows XP Install
+#  KERNEL /winxp/startrom.0
+#  TEXT HELP
+#  Setup Windows XP
+#  ENDTEXT
+
+#label xp
+#menu label Mini Windows XP
+#COM32 chain.c32 ntldr=/HBCD/XP/XP.BIN
+#TEXT HELP
+#Run system tools from Windows XP in RAM.
+#ENDTEXT
+
+#LABEL bc
+#MENU LABEL Dos Programs
+#KERNEL memdisk
+#APPEND initrd=/HBCD/Dos/boot.gz
+#TEXT HELP
+#Norton Ghost, Acronis, Paragon, Rescue, and all the other HBCD utilities...
+#ENDTEXT
+
+#MENU LABEL Run Slax
+#KERNEL /slax7/boot/vmlinuz
+#APPEND vga=normal initrd=/slax7/boot/initrfs.img load_ramdisk=1 prompt_ramdisk=0 rw printk.time=0 slax.flags=xmode,toram ramdisk_size=10240 root=/dev/ram0 rw netboot=nfs nfsroot=192.168.99.107:/srv/tftp/slax7
+#  TEXT HELP
+#  Slax Live CD
+#  ENDTEXT
+
+#LABEL Linux
+#  MENU LABEL Linux
+#  KERNEL memdisk
+#  APPEND iso raw initrd=/iso/mini.iso
+
+#LABEL Antivirus
+#  MENU LABEL Dr. Web Antivirus Live CD
+#  KERNEL /antivirus/vmlinuz
+#  INITRD root=/dev/ram0 init=/linuxrc init_opts=3 quiet initrd=/antivirus/initrd CONSOLE=/dev/tty1
+#  TEXT HELP
+#  Antivirus Dr. Web Live CD
+#  ENDTEXT
+
+#LABEL Antivirus
+#  MENU LABEL Kasperky Antivirus Live CD
+  #KERNEL /kav/boot/rescue  subdir=/kav setkmap=en  kav_lang=ru scandelay=5  root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/kav/image.squashfs cdroot
+#  KERNEL /kaspersky/rescue setkmap=en kav_lang=ru scandelay=5 root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/kaspersky/image.squashfs cdroot
+#  APPEND initrd=/kaspersky/rescue.igz
+#  KERNEL /kaspersky/rescue
+#  APPEND initrd=/kaspersky/rescue.igz root=live rootfstype=auto vga=791 init=/init kav_lang=ru udev liveimg doscsi nomodeset quiet splash
+#  TEXT HELP
+#  Kaspersky Antivirus Live CD
+#  ENDTEXT
+
+LABEL Trinity Rescue Kit
+  MENU LABEL Trinity Rescue Kit
+  KERNEL /trk/kernel.trk
+  APPEND initrd=/trk/initrd.trk ramdisk_size=98700 root=/dev/ram0 vga=0 trknfs=192.168.99.107:/srv/tftp/trk ip=dhcp splash=verbose
+  TEXT HELP
+  Trinity Rescue Kit
+  ENDTEXT
+
+#LABEL AVG Antivirus
+#  MENU LABEL AVG Rescue CD
+#  KERNEL /avg/vmlinuz
+#  APPEND max_loop=255 initrd=/avg/initrd.lzm init=linuxrc vga=ask reboot=bios
+#  TEXT HELP
+#  Antivirus AVG Rescue CD
+#  ENDTEXT
+
+#LABEL Avira Antivirus
+#  MENU LABEL Avira Rescue CD
+#  KERNEL /avira/vmlinuz
+#  APPEND vga=769 initrd=/avira/initrd.gz ramdisk_size=107023 root=/dev/ram0 rw console=/dev/vc/4
+#  kernel /iso/memdisk
+#  append iso raw initrd=/avira/avira.iso
+# TEXT HELP
+#  Antivirus Avira Rescue CD
+#  ENDTEXT
+
+#----------------------------------------------------------------------------------------
+MENU BEGIN
+MENU LABEL CentOS 6.3, Ubuntu 12.04 Install & Parted Magic Live CD
+
+LABEL Ubuntu Install
+  MENU LABEL Ubuntu Install
+  kernel ubuntu/linux
+  #append initrd=ubuntu/initrd.gz ks=nfs:192.168.99.107:/srv/tftp/ubuntu/ks.cfg
+  append initrd=ubuntu/initrd.gz
+  TEXT HELP
+  Install Ubuntu 12.04 Desktop
+  ENDTEXT
+
+LABEL CentOS Install
+  MENU LABEL CentOS Install
+  kernel centos/vmlinuz
+# append initrd=centos/initrd.img ks=nfs:192.168.99.107:/srv/tftp/centos/ks.cfg
+  append initrd=centos/initrd.img
+  TEXT HELP
+  Automatically installation CentOS 6.3 - netinstall mode
+  (root password - 123, user password - 123)
+  ENDTEXT
+
+LABEL pmagic
+  MENU LABEL Parted Magic
+  LINUX pmagic/bzImage
+  INITRD pmagic/initbase,pmagic/pmagic-6.2.sqfs00.cgz,pmagic/pmagic-6.2.sqfs01.cgz,pmagic/pmagic-6.2.sqfs02.cgz,pmagic/pmagic-6.2.sqfs03.cgz,pmagic/pmagic-6.2.sqfs04.cgz
+  APPEND edd=off load_ramdisk=1 prompt_ramdisk=0 rw vga=normal loglevel=9 max_loop=256
+  TEXT HELP
+  The Parted Magic OS employs core programs of GParted and Parted to handle
+  partitioning tasks with ease, while featuring other useful programs.
+  ENDTEXT
+
+MENU SEPARATOR
+
+LABEL return
+  MENU LABEL Return to main menu
+  MENU EXIT
+
+MENU END
+#-------------------------------------------------------------------------------------------
+
+#LABEL Archlinux Install
+#  MENU LABEL Archlinux Install
+#  kernel arch/vmlinuz
+#  append initrd=arch/archiso.img ip=dhcp archisobasedir=arch archiso_nfs_srv=192.168.99.107:/srv/tftp/arch/
+#  TEXT HELP
+#  Install Archlinux
+#  ENDTEXT
+
+
+# ------------------------------------------------------------------------------
+
+MENU BEGIN
+MENU TITLE Run system tools from floppy disk image...
+
+LABEL memtest
+  MENU LABEL MEMTEST: Memory test using Memtest86+
+  kernel /bootdisk/memtestp
+  append -
+  TEXT HELP
+  Use this tool if you suspect your RAM from being damaged. Damaged memory can
+  explain crashes or unexpected bahaviors on stable operating systems.
+  ENDTEXT
+
+LABEL ntpass
+  MENU LABEL NTPASSWD: Reset or edit Windows passwords
+  kernel /ntpasswd/vmlinuz
+  append rw vga=1 initrd=/ntpasswd/initrd.cgz,/ntpasswd/scsi.cgz
+  TEXT HELP
+  This tool can be used to reset windows users accounts. It works with all
+  windows user accounts including the administrator. You can use this tool if
+  you forgot the administrator's password.
+  ENDTEXT
+
+LABEL Hiren
+  MENU LABEL HIREN: Hiren's Boot CD
+  kernel memdisk
+  append initrd=/Hiren/HBCD/hiren.ima floppy
+  TEXT HELP
+  Hiren's Boot CD
+  ENDTEXT
+
+LABEL freedos
+  MENU LABEL FREEDOS: Clone of the MSDOS Operating System
+  kernel memdisk
+  append initrd=/bootdisk/freedos.img floppy
+  TEXT HELP
+  FreeDOS can be used to execute DOS programs such as BIOS upgrade tools
+  ENDTEXT
+
+LABEL netboot
+  MENU LABEL NETBOOT: Boot from the network
+  kernel netboot
+  append -
+
+LABEL hdt
+  MENU LABEL HDT: recent hardware diagnostics tool
+  kernel memdisk
+  append initrd=/bootdisk/hdt.img floppy
+  TEXT HELP
+  This diagnostic tool will give you information about your hardware
+  ENDTEXT
+
+LABEL ranish
+  MENU LABEL RANISH: Partition Manager tool
+  kernel memdisk
+  append initrd=/bootdisk/ranish.img floppy
+
+LABEL aida
+  MENU LABEL AIDA: old hardware diagnostics tool
+  kernel memdisk
+  append initrd=/bootdisk/aida.img floppy
+
+LABEL gag
+  MENU LABEL GAG: Graphical Boot Manager
+  kernel memdisk
+  append initrd=/bootdisk/gag.img floppy
+
+LABEL dban
+  MENU LABEL DBAN: erase all data from the disk
+  kernel memdisk
+  append initrd=/bootdisk/dban.img floppy
+
+LABEL mhdd
+  MENU LABEL MHDD: Low-level Hard Drive diagnostic tool
+  kernel memdisk
+  append initrd=/bootdisk/mhdd.img floppy
+
+LABEL grubdisk
+  MENU LABEL SGD: Super Grub Disk
+  kernel memdisk
+  append initrd=/bootdisk/grubdisk.img floppy
+
+MENU SEPARATOR
+
+LABEL return
+  MENU LABEL Return to main menu
+  MENU EXIT
+
+MENU END
+
+# ------------------------------------------------------------------------------
+
+MENU SEPARATOR
+
+LABEL local1
+  MENU LABEL *) Boot from first hard disk
+  kernel chain.c32
+  append hd0
+  TEXT HELP
+  Boot local OS installed on first hard disk
+  ENDTEXT
+
+LABEL local2
+  MENU LABEL *) Boot from second hard disk
+  kernel chain.c32
+  append hd1
+  TEXT HELP
+  Boot local OS installed on second hard disk
+  ENDTEXT
+
+
+LABEL Reboot
+  MENU LABEL *) Reboot
+  COM32 reboot.c32
+  TEXT HELP
+  Reboot the machine
+  ENDTEXT
+
+LABEL Power Off
+  MENU LABEL *) Power Off
+  COMBOOT poweroff.com
+  TEXT HELP
+  Power off the machine
+  ENDTEXT
+

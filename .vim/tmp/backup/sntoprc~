@@ -1,0 +1,67 @@
+# simple network top - a top-like console network status tool
+#  robert m love	<rml@tech9.net>
+#  chris m rivera	<cmrivera@ufl.edu>
+#
+# http://sntop.sourceforge.net - homepage
+# ftp://sntop.sourceforge.net/pub/sntop/ - anon ftp
+#
+# 07.20.2000
+#
+# EXAMPLE sntoprc
+
+Google
+www.google.com
+Google Search
+
+Yandex
+www.yandex.ru
+Yandex Search
+
+Yahoo
+www.yahoo.com
+Yahoo Search
+
+USARB
+www.usb.md
+Site Univer
+
+Mikrotik Server
+192.168.110.2
+Mikrotik Servernaya
+
+DNS 1
+192.168.254.132
+DNS server 1
+
+DNS 2
+192.168.254.133
+DNS server 2
+
+moodle.usb.md
+192.168.250.69
+Moodle Server
+
+DataBase Server
+192.168.254.134
+Server DataBase
+
+NAS D-Link
+192.168.254.99
+FTP Server
+
+Update Nod32
+192.168.254.135
+Update server Nod32 Antivirus
+
+Switch				# display name
+192.168.99.1			# IP or host
+Gateway 192.168.99.1	# display comments
+
+Router D-Link
+192.168.99.200
+Router Wi-Fi OpenWrt
+
+Macintosh PC
+192.168.99.107
+Apple Computer Server
+# EOF

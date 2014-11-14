@@ -1,0 +1,9 @@
+Host mac
+	Hostname 192.168.99.107
+	User root
+	PasswordAuthentication no
+
+Host router
+	Hostname 192.168.99.200
+	User root
+	PasswordAuthentication no

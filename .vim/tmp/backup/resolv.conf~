@@ -1,0 +1,4 @@
+#nameserver 192.168.254.132
+nameserver 192.168.254.133
+nameserver 8.8.8.8
+nameserver 8.8.4.4

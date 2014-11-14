@@ -1,0 +1,72 @@
+#color blue/green yellow/red white/magenta white/magenta
+splashimage (hd0,0)/linux.xpm.gz
+timeout 30
+default /default
+
+title Windows XP SP3 Rus Setup (Zver XP)
+map --unmap=0:0xff
+map --unhook
+savedefault
+ls /usbdrive.tag || find --set-root --ignore-cd /usbdrive.tag
+configfile /winsetup.lst
+
+title Windows 7 Rus SP1 (Activated) Setup
+map --unmap=0:0xff
+map --unhook
+root (hd0,0)
+chainloader /bootmgr
+
+title System Rescue CD vers_3.7.0
+map --unmap=0:0xff
+map --unhook
+root (hd0,0)
+map /systemrescuecd-x86-3.7.0.iso (0xff) || map --mem /systemrescuecd-x86-3.7.0.iso (0xff)
+map --hook
+root (0xff)
+configfile /grub4dos.lst || chainloader (0xff)
+map --unmap=0:0xff
+
+title Slax 7 (rus)
+map --unmap=0:0xff
+map --unhook
+root (hd0,0)
+map /slax-Russian-7.0.8-i486.iso (0xff) || map --mem /slax-Russian-7.0.8-i486.iso (0xff)
+map --hook
+root (0xff)
+configfile /grub4dos.lst || chainloader (0xff)
+map --unmap=0:0xff
+
+title Hiren vers_14
+map --unmap=0:0xff
+map --unhook
+root (hd0,0)
+map /Hiren_v14.iso (0xff) || map --mem /Hiren_v14.iso (0xff)
+map --hook
+root (0xff)
+configfile /grub4dos.lst || chainloader (0xff)
+map --unmap=0:0xff
+
+title Live CD Rus Live Ram vers_2009.10.21
+map --unmap=0:0xff
+map --unhook
+root (hd0,0)
+map /RusLive_Ram_2009_10_21.iso (0xff) || map --mem /RusLive_Ram_2009_10_21.iso (0xff)
+map --hook
+root (0xff)
+configfile /grub4dos.lst || chainloader (0xff)
+map --unmap=0:0xff
+
+title Setup HDD
+find --set-root --ignore-floppies --ignore-cd /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr
+map (hd0) (hd1)
+map (hd1) (hd0)
+map --hook
+rootnoverify (hd0)
+chainloader (hd0)+1
+
+title Reboot
+reboot
+
+title Halt
+halt
+

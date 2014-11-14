@@ -1,0 +1,25 @@
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+/home/administrator 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+/home/administrator *(root_squash,ro,no_subtree_check)
+#/srv/nfs/kav/    *(no_root_squash,ro,async,no_subtree_check)
+/srv/nfs/sysrescuecd/  *(no_root_squash,ro,async,no_subtree_check)
+/srv/nfs/sysrcd/  *(no_root_squash,ro,async,no_subtree_check)
+#/srv/nfs/slax/  *(no_root_squash,ro,async,no_subtree_check)
+/srv/nfs/clonezilla/  *(no_root_squash,ro,async,no_subtree_check)
+#/srv/nfs/drbl/  *(no_root_squash,ro,async,no_subtree_check)
+/srv/tftp/backtrack 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+/srv/tftp/trk 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+/srv/tftp/centos/ 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+/srv/tftp/ubuntu/ 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+#/srv/tftp/arch 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+/srv/tftp/slax7 192.168.99.0/24(no_root_squash,ro,async,no_subtree_check)
+

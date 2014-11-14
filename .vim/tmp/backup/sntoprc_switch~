@@ -1,0 +1,44 @@
+#sntop config from switches
+Switch bl 1 et 1
+192.168.241.111
+Blocul 1 etajul 1 (coridor administratie)
+
+Switch bl 1 et 2
+192.168.241.1
+Blocul 1 etajul 2 (jurist)
+
+Switch bl 3 et 1
+192.168.241.12
+Blocul 3 etajul 1 (telefonist)
+
+Switch bl 3 et 3
+192.168.241.3
+Blocul 3 etajul 3 (369-camera server)
+
+Switch bl 4 et 1
+192.168.241.41
+Blocul 4 etajul 1 (coridor-linga decanat)
+
+Switch bl 4 et 5
+192.168.241.4
+Blocul 4 etajul 5 (458)
+
+Switch bl 5 et 1
+192.168.241.51
+Blocul 5 etajul 1 (coridor-linga 505)
+
+Switch bl 5 et 2
+192.168.241.11
+Blocul 5 etajul 2 (517)
+
+Switch bl 5 et 3
+192.168.241.5
+Blocul 5 etajul 3 (539)
+
+Switch bl 5 et 3
+192.168.241.53
+Blocul 5 etajul 3 (coridor aripa dreapta)
+
+Switch bl 6 et 2
+192.168.241.10
+Blocul 6 etajul 2 (645-linga Catedra PPAS)

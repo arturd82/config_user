@@ -1,0 +1,7 @@
+
+
+#EXTM3U
+#EXTINF:0,Makradio_Top_Hit_128
+http://stream.makradio.ru/tophit128.mp3/title
+#EXTINF:0,Makradio_Top_Hit_48
+http://stream.makradio.ru/tophit48.aac/title

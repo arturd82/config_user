@@ -1,0 +1,38 @@
+auto lo
+iface lo inet loopback
+
+#iface eth0 inet static
+#address 192.168.99.104
+#netmask 255.255.255.0
+#gateway 192.168.99.1
+
+#auto eth0
+#iface eth0 inet static
+#address 192.168.1.3
+#netmask 255.255.255.0
+#gateway 192.168.1.1
+
+auto br0
+iface br0 inet static
+address 192.168.99.104
+netmask 255.255.255.0
+gateway 192.168.99.1
+bridge_ports eth0
+bridge_stp off
+bridge_fd 0
+bridge_maxwait 0
+
+#auto br0
+#iface br0 inet static
+#address 192.168.1.3
+#netmask 255.255.255.0
+#gateway 192.168.1.1
+
+#auto br0
+#iface br0 inet static
+#address 192.168.0.3
+#netmask 255.255.255.0
+#gateway 192.168.0.1
+
+dns-nameservers 192.168.254.132
+dns-nameservers 192.168.254.133

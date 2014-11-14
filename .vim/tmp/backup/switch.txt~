@@ -1,0 +1,88 @@
+
+Starting Nmap 5.21 ( http://nmap.org ) at 2014-04-17 14:28 EEST
+Nmap scan report for 192.168.241.0
+Host is up (0.0021s latency).
+Not shown: 999 filtered ports
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 192.168.241.1
+Host is up (0.0042s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+
+Nmap scan report for 3.241.168.192.in-addr.arpa (192.168.241.3)
+Host is up (0.0028s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+
+Nmap scan report for 4.241.168.192.in-addr.arpa (192.168.241.4)
+Host is up (0.0024s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+80/tcp open  http
+
+Nmap scan report for 192.168.241.5
+Host is up (0.0025s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+80/tcp open  http
+
+Nmap scan report for 192.168.241.10
+Host is up (0.0057s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+
+Nmap scan report for 11.241.168.192.in-addr.arpa (192.168.241.11)
+Host is up (0.0049s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+80/tcp open  http
+
+Nmap scan report for 12.241.168.192.in-addr.arpa (192.168.241.12)
+Host is up (0.0033s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 192.168.241.13
+Host is up (0.0052s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 192.168.241.14
+Host is up (0.0065s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 41.241.168.192.in-addr.arpa (192.168.241.41)
+Host is up (0.026s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 111.241.168.192.in-addr.arpa (192.168.241.111)
+Host is up (0.0060s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+80/tcp open  http
+
+Nmap scan report for 192.168.241.255
+Host is up (0.0012s latency).
+Not shown: 999 filtered ports
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 256 IP addresses (13 hosts up) scanned in 11.92 seconds
