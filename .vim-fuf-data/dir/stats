@@ -1,0 +1,5 @@
+{'word': '/.', 'pattern': '/'}
+{'word': '/root/mail/.', 'pattern': '/root/mail/'}
+{'word': '/root/mail/', 'pattern': '/root/'}
+{'word': '/root/.gstreamer-0.10/', 'pattern': '/root/'}
+{'word': '/root/', 'pattern': '/root'}

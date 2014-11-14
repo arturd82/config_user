@@ -1,0 +1,9 @@
+{'word': '~/.tmux.conf', 'lnum': 1, 'pattern': '\C\V\^#set -g xterm-keys on\$', 'path': '/root/.tmux.conf', 'time': 1402640116}
+{'word': '.zsh_history', 'lnum': 1, 'pattern': '\C\V\^./ubuntu-clean\$', 'path': '/root/.zsh_history', 'time': 1391156467}
+{'word': '/root/.ssh/known_hosts', 'lnum': 1, 'pattern': '\C\V\^|1|4Egpur3VMdDOvD/K44zTNqKIIM8=|HYcVqi+EqD+Q6teN6DiT/lZA1qE= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7ex5ZK4lT39ilakFinMHHSHtbef0iFiDoFHtexY+74o/aNO8fuvYzCrioTJ0nuexm8yKCQGx5NLtxzgNzsOpOE0Kh3oYVktLYKAF69nLS5HYwUO9skxoFY9M7ChZW2va7rwOGkGPxZPo6f0NTWr0Bes50zX6ot7WWBOPIgvR2rEXAEMcLb3JVP5YGpEj40jjsdvezHEQXbw1eyvM+W26vF/HzuFyis0Hc45xIfCxnPtrHJB3r32k9A80dFK8XPwXIjuMD6xtk5AdZfgtZn1cBMwFkSrL1olZHf0EfMeubNywrvCrMFNKkpuksiRXChdlWmYDp03Rj3tEnjOLETfyL\$', 'path': '/root/.ssh/known_hosts', 'time': 1358346041}
+{'word': '/root/.zshrc', 'lnum': 1, 'pattern': '\C\V\^#~/.zshrc\$', 'path': '/root/.zshrc', 'time': 1355998079}
+{'word': 'crontab_sysadmin', 'lnum': 26, 'pattern': '\C\V\^\$', 'path': '/var/spool/cron/crontabs/sysadmin', 'time': 1355913948}
+{'word': 'crontab root', 'lnum': 17, 'pattern': '\C\V\^# email to the user the crontab file belongs to (unless redirected).\$', 'path': '/var/spool/cron/crontabs/root', 'time': 1355913312}
+{'word': 'burg.cfg', 'lnum': 1, 'pattern': '\C\V\^#\$', 'path': '/boot/burg/burg.cfg', 'time': 1354782982}
+{'word': '/root/.bashrc', 'lnum': 1, 'pattern': '\C\V\^# ~/.bashrc: executed by bash(1) for non-login shells.\$', 'path': '/root/.bashrc', 'time': 1354782769}
+{'word': '/root/.vimrc', 'lnum': 1, 'pattern': '\C\V\^syntax on\$', 'path': '/root/.vimrc', 'time': 1354782656}

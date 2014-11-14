@@ -1,0 +1,5 @@
+{'word': '/root/.bashrc', 'pattern': '/root/.bashrc'}
+{'word': ':q', 'pattern': ':q'}
+{'word': '/root/.vimrc', 'pattern': '/root/.vimrc'}
+{'word': '.vimrc', 'pattern': '.vimrc'}
+{'word': 'samba.conf', 'pattern': 'samba.conf'}
